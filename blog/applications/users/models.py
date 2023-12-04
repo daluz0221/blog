@@ -15,8 +15,10 @@ class User(AbstractUser, PermissionsMixin):
     nombre = models.CharField(max_length=100, blank=True, null=True)
     apellido = models.CharField(max_length=100, blank=True, null=True)
     genero = models.CharField(max_length=1, choices=(('M', 'Masculino'), ('F', 'Femenino'), ("O", "Otros")), blank=True, null=True)
+    coderegister = models.CharField(max_length=6, blank=True, null=True)
 
     is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']

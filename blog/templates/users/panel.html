@@ -7,10 +7,10 @@
 </head>
 <body>
     <h1>Panel de usuario</h1>
-    <h3>Bienvenido: </h3>
+    <h3>Bienvenido:{{user.username}} </h3>
     <ul>
-        <li><a href="#">Cerrar Sesiòn</a></li>
-        <li><a href="#">Actualizar datos</a></li>
+        <li><a href="{% url 'users_app:user-logout' %}">Cerrar Sesiòn</a></li>
+        <li><a href="{% url 'users_app:user-update-password' %}">Cambiar contraseña</a></li>
     </ul>
 </body>
 </html>
